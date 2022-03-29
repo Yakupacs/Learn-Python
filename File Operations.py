@@ -1,6 +1,6 @@
-## Dosya açmak ve oluþturmak için open() fonksiyonu kullanýlýr.
-## Kullanýmý : open(dosya_adi,dosya_eriþme_modu)
-## dosya_eriþme_modu => dosyayý hangi amaçla açtýðýmýzý belirtir.
+## Dosya aï¿½mak ve oluï¿½turmak iï¿½in open() fonksiyonu kullanï¿½lï¿½r.
+## Kullanï¿½mï¿½ : open(dosya_adi,dosya_eriï¿½me_modu)
+## dosya_eriï¿½me_modu => dosyayï¿½ hangi amaï¿½la aï¿½tï¿½ï¿½ï¿½mï¿½zï¿½ belirtir.
 
 
 
@@ -11,8 +11,8 @@
 
 # 'w' : (Write) Yazma Modu.
 
-#           ** Dosyayý konumda oluþturur.
-#           ** Dosya içeriðini Siler ve Yeniden Ekler.
+#           ** Dosyayï¿½ konumda oluï¿½turur.
+#           ** Dosya iï¿½eriï¿½ini Siler ve Yeniden Ekler.
 
 #file = open("PythonNewFile.txt","w")
 #file.close()
@@ -30,8 +30,8 @@
 
 # 'a' : (Append) Ekleme. 
 
-#                       **Dosya Konumda Yoksa Oluþturur. 
-#                       **Daha Önce Bir Verinin Üzerine Ekleme Yapar.
+#                       **Dosya Konumda Yoksa Oluï¿½turur. 
+#                       **Daha ï¿½nce Bir Verinin ï¿½zerine Ekleme Yapar.
 #file = open("PythonNewFile.txt","a",encoding = "utf-8")
 #file.write("Yakup Acis\n")
 #file.close()
@@ -45,7 +45,7 @@
 
 
 
-# 'x' : (Create) Oluþturma. 
+# 'x' : (Create) Oluï¿½turma. 
 
 #                           **Dosya Zaten Varsa Hata Verir.
 #file = open("PythonNewFile2.txt","x",encoding='utf-8')
@@ -59,7 +59,7 @@
 
 
 
-## 'r' : (Read) Okuma. Varsayýlan. Dosya Konumda Yoksa Hata Verir.
+## 'r' : (Read) Okuma. Varsayï¿½lan. Dosya Konumda Yoksa Hata Verir.
 
 #try:
 #    file = open("PythonNewFile.txt","r")
@@ -108,7 +108,7 @@
 
 #file = open("PythonNewFile.txt","r",encoding = "utf-8")
 
-##readline bir satýr okur
+##readline bir satï¿½r okur
 #print(file.readline(),end = "")
 #print(file.readline(),end = "")
 #print(file.readline(),end = "")
@@ -129,18 +129,18 @@
 
 
 #with open("PythonNewFile.txt","r",encoding="utf-8") as file:
-#    print(file.tell()) ## TEEL cursor'un nerede olduðunu söyler.
+#    print(file.tell()) ## TEEL cursor'un nerede olduï¿½unu sï¿½yler.
 
 #    print(file.read()) 
 
-#    print(file.seek(0)) ## SEEK cursor'u 0 konumuna gönderdik.
+#    print(file.seek(0)) ## SEEK cursor'u 0 konumuna gï¿½nderdik.
 
 #    print(file.tell())
 
 #    print(file.read())
 
 #    print(file.tell())
-#    ##with ile birlikte otomatik close çalýþýr.
+#    ##with ile birlikte otomatik close ï¿½alï¿½ï¿½ï¿½r.
 
 
 
@@ -153,13 +153,13 @@
 #with open("PythonNewFile.txt","r+", encoding = "utf-8") as file:
 #    file.seek(26)
 #    file.write("deneme")
-#with open("PythonNewFile.txt","r+", encoding = "utf-8") as file: ## r+ hem okuma hem yazma! utf-8 türkçe karakterler için.
+#with open("PythonNewFile.txt","r+", encoding = "utf-8") as file: ## r+ hem okuma hem yazma! utf-8 tï¿½rkï¿½e karakterler iï¿½in.
 #    print(file.read())
 
 
 
 
-## Sayfa Sonunda Güncelleme
+## Sayfa Sonunda Gï¿½ncelleme
 #with open("PythonNewFile.txt","a", encoding="utf-8") as file:
 #     file.write("\nAbdulkadir Acis")
 
@@ -175,7 +175,7 @@
 
 
 
-###Sayfa Ortasýnda Güncelleme
+###Sayfa Ortasï¿½nda Gï¿½ncelleme
 #with open("PythonNewFile.txt","r+", encoding="utf-8") as file:
 #    list = file.readlines()
 #    list.insert(6,"yeni\n") 
@@ -183,4 +183,4 @@
 #    file.writelines(list)
 
 #with open("PythonNewFile.txt","r",encoding="utf-8") as file:
-#    print(file.read())
+# #   print(file.read())
