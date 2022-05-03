@@ -28,13 +28,18 @@ class Twitter:
         time.sleep(2)
 
     def search(self, hashtag):
-        searchBtn = self.browser.find_element_by_xpath("//*[@id='react-root']/div/div/div[2]/header/div/div/div/div[1]/div[2]/nav/a[2]/div/div/svg")
-        searchBtn.click()
-        searchInput = self.browser.find_element_by_xpath("//*[@id='react-root']/div/div/div[2]/main/div/div/div/div/div/div[1]/div[1]/div/div/div/div/div[1]/div[2]/div/div/div/form/div[1]/div/div/label/div[2]/div/input")
-        searchInput.send_keys(hashtag)
+        searchBtn = self.browser.find_element_by_xpath("//*[@id='react-root']/div/div/div[2]/main/div/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/div/div/form/div[1]/div/div/label/div[2]/div/input")
+        searchBtn.send_keys(hashtag)
         time.sleep(2)
-        searchInput.send_keys(Keys.ENTER)
-        time.sleep(2)        
+        searchBtn.send_keys(Keys.ENTER)
+        time.sleep(2) 
+
+        list = self.browser.find_element_by_xpath("//div[@data-testid='primaryColumn']/div[0]/div[3]")
+
+        for item in list:
+            print("************")
+            print(item.text)     
 
 twitter = Twitter(username, password)
 twitter.signIn()
+twitter.search("python")
